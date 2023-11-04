@@ -1,0 +1,573 @@
+/* ========= Font Link Part Start ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* --------- Font Link Part End --------- */
+/* ========= Variable Part Start ======== */
+:root{
+    --brand-color : #F40404;
+    --paragraph-color : #6C6C6C;
+    --light-color : #fff;
+    --dark-color : #000;
+    --poppins : 'Poppins', sans-serif;
+}
+/* --------- Variable Part End --------- */
+/* ========= Common CSS Part Start ======== */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul, ol {
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+/* --------- Common CSS Part End --------- */
+/* ========= Top Navbar Part Start ======== */
+#topnavbar{
+    width: 100%;
+    padding: 15px 0;
+    background: #282828;
+}
+.contact_info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.mail, .call{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.line{
+    width: 2px;
+    height: 16px;
+    background: #5C6A92;
+}
+.icon{
+    font-size: 17px;
+    color: var(--light-color);
+}
+.text a{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: #fff;
+}
+.social_icon{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.social_icon a{
+    font-size: 16px ;
+    color: var(--light-color);
+    transition: 0.2s all linear;
+}
+.social_icon a:hover{
+    color: var(--brand-color);
+    transform: scale(1.1);
+}
+/* --------- Top Navbar Part End --------- */
+/* ========= Navbar Part Start ======== */
+.menubar{
+    width: 100%;
+    height:105px ;
+    background: var(--brand-color) !important;
+}
+.menu_item li a,
+.src_btn{
+    font-size:16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--light-color) !important;
+}
+.src_btn{
+    padding: 10px 30px;
+    transition: 0.2s all linear;
+}
+.menu_item li a:hover,
+.src_btn:hover{
+    color: var(--dark-color) !important;
+}
+.sticky_navbar{
+    height: 70px;
+    position: sticky;
+    top: -1px;
+    left: 0;
+    z-index: 999;
+    animation: smooth 1s linear;
+}
+@keyframes smooth{
+    from{
+        top:-200px
+    }
+    to{
+        top: -1px;
+    }
+}
+/* --------- Navbar Part End --------- */
+/* ========= Banner Part Start ======== */
+#banner{
+    width: 100%;
+    background: url(../images/banner_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.banner_text{
+    padding: 257px 0;
+}
+.banner_text h1{
+    width: 842px;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+}
+.banner_text a{
+    width: 186px;
+    height: 51px;
+    background: var(--brand-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    margin-top: 45px;
+    transition: 0.2s all linear;
+}
+.banner_text a:hover{
+    background: var(--light-color);
+    color: var(--brand-color);
+    transform: scale(1.1);
+}
+/* --------- Banner Part End --------- */
+/* ========= Supplier Part Start ======== */
+#supplier{
+    width: 100%;
+    background: var(--light-color);
+    padding-bottom: 28px ;
+}
+.supplier_text{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 167px;
+    padding: 78px 0 100px 0;
+}
+.supplier_text .heading{
+    width: 300px;
+}
+.supplier_text .heading h3{
+    font-size:48px;
+    font-weight: 700;
+    line-height: 72px;
+    font-family: var(--poppins);
+    color: var(--dark-color);
+}
+.supplier_text .paragraph{
+    width: 650px;
+}
+.supplier_text .paragraph p{
+    font-size:16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: var(--paragraph-color);
+}
+.supplier_slider_item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.supplier_slider_item img{
+    width:458px ;
+    margin: 0 auto;
+}
+/* --------- Supplier Part End --------- */
+/* ========= Services Part Start ======== */
+#services{
+    margin-top: 28px;
+}
+.service_heading{
+    width: 50%;
+    padding: 106px 150px 142px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.service_heading h3{
+    width: 421px;
+    font-size:48px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--dark-color);
+    text-align: left;
+}
+.service_heading p{
+    width: 421px;
+    font-size:16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: var(--paragraph-color);
+    text-align: left;
+}
+.service_item{
+    width: 50%;
+    height: 410px;
+}
+.service_img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 116px;
+    position: relative;
+    z-index: 1;
+}
+.service_img::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.service_item h4{
+    font-size:36px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+}
+.service_item a{
+    width: 186px;
+    height: 51px;
+    background: var(--brand-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    margin-top: 45px;
+    transition: 0.2s all linear;
+}
+.service_item a:hover{
+    background: var(--light-color);
+    color: var(--brand-color);
+    transform: scale(1.1);
+}
+.service_item .one{
+    background: url(../images/services_1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.service_item .two{
+    background: url(../images/services_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.service_item .three{
+    background: url(../images/services_3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* --------- Services Part End --------- */
+/* ========= About Part Start ======== */
+#about{
+    width: 100%;
+    background: #F0F0F0;
+    padding: 136px 0;
+}
+.about_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_heading{
+    width: 413px ;
+    padding: 100px 75px;
+    background: var(--brand-color);
+}
+.about_heading h3{
+    font-size:36px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    line-height: 54px;
+}
+.about_img{
+    width: 726px ;
+    height: 361px;
+    background: url(../images/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_img a{
+    width: 186px;
+    height: 51px;
+    background: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--brand-color);
+    margin-top: 45px;
+    transition: 0.2s all linear;
+}
+.about_img a:hover{
+    background: var(--brand-color);
+    color: var(--light-color);
+    transform: scale(1.1);
+}
+/* --------- About Part End --------- */
+/* ========= Branding Part Start ======== */
+#branding{
+    width: 100%;
+    background: var(--light-color);
+    padding: 115px 0;
+}
+.brand_logo{
+    width: 265px ;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.brand_logo:hover{
+    transform: scale(1.1);
+}
+/* --------- Branding Part End --------- */
+/* ========= Blog Part Start ======== */
+#blog{
+    width: 100%;
+    padding: 110px 0;
+    background: #F0F0F0;
+}
+.blog_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog_item{
+    width: 340px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 75px 45px 55px 45px;
+    position: relative;
+    z-index: 1;
+    transition: 0.2s all linear;
+}
+.blog_item:hover{
+    transform: scale(1.1);
+}
+.blog_item::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.blog_item h3{
+    font-size:24px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    line-height: 35px;
+}
+.blog_item a{
+    width: 123px;
+    height: 38px;
+    background: rgb(255, 255, 255,0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:12px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    margin-top: 55px;
+    transition: 0.2s all linear;
+}
+.blog_item:hover a{
+    background: var(--brand-color);
+    transform: scale(1.1);
+}
+.blog_link{
+    display: block;
+    font-size:16px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--dark-color);
+    margin-top: 30px;
+    text-align: right;
+    transition: 0.2s all linear;
+}
+.blog_link:hover{
+    color: var(--brand-color);
+}
+/* --------- Blog Part End --------- */
+/* ========= Location Part Start ======== */
+#locataion{
+    width: 100%;
+}
+.join{
+    width: 100%;
+    height: 145px;
+    background: var(--brand-color);
+    border-bottom: 5px solid #FFB800;
+}
+.join_content{
+    width: 100%;
+    height: 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.join_content h3{
+    font-size:36px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+}
+.contact_btn{
+    width: 142px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+    font-weight: 600;
+    font-family: var(--poppins);
+    color: var(--light-color);
+}
+/* --------- Location Part End --------- */
+/* ========= Footer Part Start ======== */
+#footer{
+    width: 100%;
+    padding-top: 150px;
+    background: #1F1F1F;
+}
+.footer_left .logo img{
+    width: 192px;
+}
+.contact_info ul{
+    margin-top: 33px;
+}
+.contact_info ul li a{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--light-color);
+    font-family: var(--poppins);
+    margin-top: 15px;
+}
+.footer_social_icons ul{
+    margin-top: 34px ;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+.footer_social_icons ul li a{
+    width: 29px;
+    height: 29px;
+    background: var(--brand-color);
+    border-radius: 29px;
+    font-size: 16px;
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all linear;
+}
+.footer_social_icons ul li a:hover{
+    border: 2px solid var(--brand-color);
+    background: transparent;
+    color: var(--brand-color);
+}
+.footer_menu h4,
+.footer_right h4{
+    font-size:16px;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    margin-bottom: 25px;
+    margin-top: 32px;
+}
+.footer_menu ul li a{
+    font-size:14px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: var(--light-color);
+    line-height: 40px;
+    transition: 0.2s all linear;
+}
+.footer_menu ul li a:hover{
+    color: var(--brand-color);
+}
+.footer_right ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.copywrite_text{
+    width: 100%;
+    height: 110px ;
+    background: #282828;
+    margin-top: 170px;
+}
+.copywrite_text p{
+    font-size:16px;
+    font-weight: 500;
+    font-family: var(--poppins);
+    color: #6C6C6C;
+    line-height: 110px;
+}
+/* --------- Footer Part End --------- */
